@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript vs Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-top: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .code-section {
+            background-color: #f5f5f5;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript vs Java - Estudo Comparativo</h1>
+
+    <div class="section">
+        <h2>O Desafio</h2>
+        <p>O JavaScript foi criado em 1995 para que houvesse mais recursos de interatividade nas páginas HTML e do CSS. Muitos usuários confundem o JavaScript com a linguagem de programação JAVA. O desafio proposto é:</p>
+        <ol>
+            <li>Pesquisar a diferença entre o JavaScript e a linguagem JAVA.</li>
+            <li>Quais empresas criaram o JavaScript e o JAVA, e quais são as que atualmente mantêm o desenvolvimento dessas linguagens?</li>
+            <li>Criar um código HTML que tenha um botão que faça com que a página fique da cor AZUL, por meio de uma chamada de JavaScript.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>1. Diferenças entre JavaScript e Java</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>JavaScript</th>
+                    <th>Java</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Tipo</strong></td>
+                    <td>Linguagem de script interpretada</td>
+                    <td>Linguagem compilada</td>
+                </tr>
+                <tr>
+                    <td><strong>Tipagem</strong></td>
+                    <td>Dinâmica (tipos determinados em tempo de execução)</td>
+                    <td>Estática (tipos definidos na declaração)</td>
+                </tr>
+                <tr>
+                    <td><strong>Execução</strong></td>
+                    <td>Interpretada pelo navegador ou motor JavaScript</td>
+                    <td>Compilada para bytecode e executada na JVM</td>
+                </tr>
+                <tr>
+                    <td><strong>Uso principal</strong></td>
+                    <td>Desenvolvimento web front-end, back-end (Node.js)</td>
+                    <td>Aplicações corporativas, sistemas embarcados, Android</td>
+                </tr>
+                <tr>
+                    <td><strong>Orientação a objetos</strong></td>
+                    <td>Baseada em protótipos</td>
+                    <td>Baseada em classes (tradicional)</td>
+                </tr>
+                <tr>
+                    <td><strong>Dependência de plataforma</strong></td>
+                    <td>Independente (roda em navegadores ou ambientes Node.js)</td>
+                    <td>"Write once, run anywhere" (com a JVM)</td>
+                </tr>
+                <tr>
+                    <td><strong>Memória</strong></td>
+                    <td>Gerenciamento automático de memória</td>
+                    <td>Garbage collection automático</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Embora o nome sugira uma relação próxima, JavaScript e Java são linguagens fundamentalmente diferentes, criadas para propósitos distintos. O JavaScript foi nomeado assim principalmente por questões de marketing, aproveitando a popularidade do Java na época de seu lançamento.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Empresas Criadoras e Mantenedoras</h2>
+
+        <h3>JavaScript</h3>
+        <ul>
+            <li><strong>Criador:</strong> Brendan Eich na Netscape Communications Corporation em 1995</li>
+            <li><strong>Nome original:</strong> Mocha, depois LiveScript, e finalmente JavaScript</li>
+            <li><strong>Mantenedores atuais:</strong>
+                <ul>
+                    <li>O padrão ECMAScript é mantido pelo Comitê Técnico 39 (TC39) da ECMA International</li>
+                    <li>Participantes do TC39 incluem representantes de Mozilla, Google, Microsoft, Apple e outros</li>
+                    <li>Implementações específicas são mantidas pelos desenvolvedores de navegadores (Google mantém o V8, Mozilla mantém o SpiderMonkey, etc.)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Java</h3>
+        <ul>
+            <li><strong>Criador:</strong> James Gosling e equipe na Sun Microsystems em 1995</li>
+            <li><strong>Mantenedores atuais:</strong>
+                <ul>
+                    <li>Oracle Corporation (desde a aquisição da Sun Microsystems em 2010)</li>
+                    <li>A comunidade OpenJDK (versão open-source com contribuições da Oracle, Red Hat, e outros)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Mudar a Cor da Página com JavaScript</h2>
+        <p>Clique no botão abaixo para mudar a cor de fundo desta página para AZUL usando JavaScript:</p>
+
+        <!-- Botão que chama a função mudarCorParaAzul() quando clicado -->
+        <button onclick="mudarCorParaAzul()">Mudar para Azul</button>
+
+        <div class="code-section">
+            <h3>Código HTML e JavaScript utilizado:</h3>
+            <pre><code>&lt;!-- Botão com evento onclick que chama a função JavaScript --&gt;
+&lt;button onclick="mudarCorParaAzul()"&gt;Mudar para Azul&lt;/button&gt;
+
+&lt;script&gt;
+    // Função que muda a cor de fundo da página para azul
+    function mudarCorParaAzul() {
+        // Seleciona o elemento body e altera sua propriedade backgroundColor
+        document.body.style.backgroundColor = "#0000FF";
+
+        // Mensagem no console para confirmar a execução da função
+        console.log("A cor de fundo foi alterada para azul!");
+    }
+&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        // Função que muda a cor de fundo da página para azul
+        function mudarCorParaAzul() {
+            // Seleciona o elemento body e altera sua propriedade backgroundColor
+            document.body.style.backgroundColor = "#0000FF";
+
+            // Mensagem no console para confirmar a execução da função
+            console.log("A cor de fundo foi alterada para azul!");
+        }
+    </script>
+</body>
+</html>
