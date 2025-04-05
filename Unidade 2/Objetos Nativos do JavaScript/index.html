@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Catalogação de Livros Digitais</title>
+    <!-- Referência para o arquivo CSS externo -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Catalogação de Livros Digitais</h1>
+
+        <div class="info-box">
+            <p>Este sistema utiliza expressões regulares para identificar e contar ocorrências de nomes de autores em textos,
+            considerando regras específicas para nomes com partes que podem não começar com maiúsculas (como preposições).</p>
+        </div>
+
+        <h3>Digite um texto para análise:</h3>
+        <textarea id="input-text" placeholder="Digite aqui o texto que deseja analisar...">O romance Dom Casmurro, escrito por Machado de Assis, é uma das obras-primas da literatura brasileira.
+Machado de Assis é considerado um dos maiores escritores da língua portuguesa.
+Além de Machado de Assis, Pedro Álvares Cabral também é uma figura importante na história brasileira,
+embora Pedro Álvares Cabral não seja um escritor, mas sim o navegador português que descobriu o Brasil.</textarea>
+
+        <button id="analyze-btn">Analisar Texto</button>
+
+        <div class="result" id="result-container" style="display: none;">
+            <h3>Autores encontrados:</h3>
+            <div id="authors-list" class="author-count"></div>
+        </div>
+
+        <div class="explanation">
+            <h3>Como funciona a expressão regular:</h3>
+            <p>A expressão regular utilizada é capaz de identificar nomes de autores como "Machado de Assis" e "Pedro Álvares Cabral",
+            considerando que algumas partes do nome podem começar com letras minúsculas (como preposições "de", "da", etc.).</p>
+
+            <div class="code-block">
+                <code>
+                    /\b([A-Z][a-zÀ-ÿ]+)(\s+([a-zÀ-ÿ]+\s+|[A-Z][a-zÀ-ÿ]+\s+))*([A-Z][a-zÀ-ÿ]+)\b/g
+                </code>
+            </div>
+
+            <p><strong>Explicação da expressão:</strong></p>
+            <ul>
+                <li>\b - Define uma fronteira de palavra</li>
+                <li>([A-Z][a-zÀ-ÿ]+) - Captura uma palavra que começa com letra maiúscula seguida de uma ou mais letras minúsculas, incluindo caracteres acentuados</li>
+                <li>(\s+([a-zÀ-ÿ]+\s+|[A-Z][a-zÀ-ÿ]+\s+))* - Captura zero ou mais ocorrências de espaços seguidos por:
+                    <ul>
+                        <li>Uma palavra com letras minúsculas (como "de", "da") OU</li>
+                        <li>Uma palavra que começa com maiúscula</li>
+                    </ul>
+                </li>
+                <li>([A-Z][a-zÀ-ÿ]+) - Termina com uma palavra que começa com letra maiúscula</li>
+                <li>\b - Define outra fronteira de palavra</li>
+                <li>g - Flag global que permite encontrar todas as ocorrências</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Referência para os arquivos JavaScript externos após o conteúdo da página -->
+    <!-- Primeiro carregamos o módulo principal de contagem de autores -->
+    <script src="./js/contador-autores.js"></script>
+    <!-- Depois carregamos a aplicação que utiliza o módulo -->
+    <script src="./js/app.js"></script>
+</body>
+</html>

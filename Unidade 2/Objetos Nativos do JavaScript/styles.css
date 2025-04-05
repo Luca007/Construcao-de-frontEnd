@@ -1,0 +1,125 @@
+/*
+ * Estilos para o Sistema de Catalogação de Livros Digitais
+ * Este arquivo contém todos os estilos da aplicação, seguindo boas práticas de organização
+ */
+
+/* Reset e estilos base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalhos */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #3498db;
+}
+
+/* Caixa de informações */
+.info-box {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Campo de texto */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Botões */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Área de resultados */
+.result {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* Exemplos de texto */
+.example {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.example pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+}
+
+/* Contagem de autores */
+.author-count {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.author {
+    margin: 5px 0;
+    padding: 5px 10px;
+    background-color: #e8f4f8;
+    border-radius: 3px;
+}
+
+/* Área de explicação */
+.explanation {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+/* Blocos de código */
+.code-block {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+}
